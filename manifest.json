@@ -1,0 +1,15 @@
+{
+   "browser_action": {
+      "default_icon": "icon.png"
+   },
+   "content_scripts": [ {
+      "css": [ "main.css" ],
+      "js": [ "javascript.js" ],
+      "matches": [ "http://nintendoage.com/forum/*" ]
+   } ],
+   "description": "This extension serves to alter the experience on the forum section of nintendoage.com.",
+   "manifest_version": 2,
+   "name": "NAui",
+   "permissions": [ "tabs", "activeTab", "storage" ],
+   "version": "1.00"
+}
