@@ -50,3 +50,21 @@ form[name='qr']{
 form[name='qr'] #taMsg{
   height: 60px;
 }
+
+
+/* FOES */
+.enemy{
+
+}
+.enemy .panel-heading{
+  background-color: lightcoral !important;
+  cursor: pointer;
+}
+
+.enemy .panel-body{
+  display: none;
+}
+
+.enemy.activated .panel-body{
+  display: block;
+}
