@@ -1,5 +1,5 @@
 /* Hello! */
-console.log('NAui V1.2 loaded successfully!');
+console.log('NAui V1.3 loaded successfully!');
 
 
 /* Fix for top button on quick reply section */
@@ -15,6 +15,7 @@ topButton.addEventListener('click', function(e){
 
 
 /* Super worst friends (FOES) */
+// Helper function
 function getCookie(cname){
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -70,7 +71,6 @@ if(getCookie('foes')){
 /* Add elements to page for showing fixed elements (top nav, quick reply) */
 // Helper functions
 function insertAfter(el, referenceNode) { referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling); }
-function insertBefore(el, referenceNode) { referenceNode.parentNode.insertBefore(el, referenceNode); }
 
 /* Top Nav */
 // Starting with the Top Nav, create a container to place the relevant elements into for easier manipulation

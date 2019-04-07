@@ -172,3 +172,25 @@ form[name='qr'] #taMsg{
 .enemy.activated .panel-body{
   display: block;
 }
+
+
+/* Quote train resolution */
+.FTQUOTE, .Quote{
+  width: 100% !important;
+  margin: 10px 0 !important;
+}
+
+.FTQUOTE .FTQUOTE{
+  min-height: 100px;
+  height: 100px;
+  overflow: hidden;
+  opacity: .75;
+  background: #ebebeb;
+  transition: opacity .5s ease;
+  cursor: pointer;
+}
+
+.FTQUOTE .FTQUOTE:hover, .FTQUOTE .FTQUOTE:hover .FTQUOTE{
+  opacity: 1;
+  height: initial;
+}
