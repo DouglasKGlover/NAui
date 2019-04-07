@@ -1,13 +1,18 @@
 /* Fixed top nav */
 body{
-  padding: 100px 0 125px 0;
+  padding: 100px 0 25px 0;
+}
+
+a[name='compose']{
+  margin-top: -100px;
+  position: relative;
+  display: block;
 }
 
 #topGutter{
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999;
   background: white;
 }
 
@@ -15,40 +20,139 @@ body{
   position: fixed;
   top: 38px;
   width: 100%;
-  z-index: 8888;
 }
 
 #top_nav + .row{
-  background: red;
   position: fixed;
   top: 70px;
   width: 100%;
-  z-index: 8888;
+  background: white !important;
 }
 
-#welcome{
-  background: white;
+.breadcrumb{
+  background: white !important;
+}
+
+#clock span{
+  display: none;
+}
+
+#welcome, #bc_nav{
   padding: 10px 15px 5px 5px !important;
-  border-radius: 5px;
   margin: -5px -10px 0 0;
+}
+
+#fixedTopNav{
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  transition: all .5s ease;
+}
+
+#fixedTopNav #topGutter, #fixedTopNav #top_nav, #fixedTopNav #top_nav + .row{
+  position: relative;
+  top: 0;
+}
+
+#topNavShow{
+  background: #101010;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  cursor: default;
+  font-weight: bold;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+#fixedTopNav.scrolled{
+  transform: translateY(-95px);
+}
+
+#fixedTopNav.scrolled #topNavShow{
+  opacity: 1;
+}
+
+#fixedTopNav:hover{
+  transform: translateY(0);
+}
+
+#fixedTopNav.scrolled:hover #topNavShow{
+  opacity: 0;
+}
+
+#fixedTopNav.scrolled #top_nav + .row{
+  border-bottom: 1px solid gray;
 }
 
 
 /* Fixed quick reply */
 form[name='qr']{
   position: fixed;
-  bottom: 0;
-  right: 0;
-  text-align: right;
+  bottom: -200px;
   width: 100%;
   background: white;
   padding: 10px;
-  border-radius: 10px;
+  border-top: 1px solid gray;
 }
 
+form[name='qr'] br{
+  display: none;
+}
+
+form[name='qr'] .pull-left, form[name='qr'] .pull-right{
+  float: none !important;
+}
+
+form[name='qr'] .pull-left{
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+form[name='qr'] .pull-right{
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
 
 form[name='qr'] #taMsg{
-  height: 60px;
+  height: 120px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#fixedQuickReply{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transform: translateY(171px);
+  transition: all .5s ease;
+}
+
+#fixedQuickReply:hover{
+  transform: translateY(0);
+}
+
+#fixedQuickReply form[name='qr']{
+  position: relative;
+  bottom: 0;
+}
+
+#quickReplyShow{
+  background: #101010;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  cursor: default;
+  font-weight: bold;
+  opacity: 1;
+  transition: all .5s ease;
+}
+
+#fixedQuickReply:hover #quickReplyShow{
+  opacity: 0;
 }
 
 
