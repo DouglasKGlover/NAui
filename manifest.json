@@ -11,5 +11,5 @@
    "manifest_version": 2,
    "name": "NAui",
    "permissions": [ "tabs", "activeTab", "storage" ],
-   "version": "1.3"
+   "version": "1.4"
 }
